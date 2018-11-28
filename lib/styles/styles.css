@@ -1,0 +1,57 @@
+body {
+  background-color: #2B2A35;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.icon {
+  height: 52px;
+  width: 52px;
+}
+
+.main-title {
+  color: white;
+  font-size: 2.5em;
+  align-self: flex-end;
+  text-indent: 50px;
+}
+
+.nav-bar {
+  width: 5vw;
+  moz-box-shadow:     inset 0 0 1.5px #000000;
+  -webkit-box-shadow: inset 0 0 1.5px #000000;
+  box-shadow:         inset 0 0 1.5px #000000;
+  grid-template-rows: 10% 10% 10%
+}
+
+.nav-item {
+  height: 8vh;
+  display: flex;           /* establish flex container */
+  flex-direction: column;  /* make main axis vertical */
+  justify-content: center; /* center items vertically, in this case */
+  align-items: center;
+}
+
+.nav-item:hover {
+  background-color: #00C6C8;
+}
+
+#content-container {
+  width: 95vw;
+  display: grid;
+  grid-template-rows: 25% auto 25%;
+}
+
+#main-container {
+  display: grid;
+  grid-template-columns: 5vw auto;
+  justify-items: start;
+  height: 100vh;
+}
+
+#top-content-container {
+  height: 10vh;
+  display: flex;
+}
+
+
+
