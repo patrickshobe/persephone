@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <title>Persefone</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="./lib/styles/styles.css">
   <link rel="stylesheet" type="text/css" href="./lib/styles/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 </head>
 <body>
@@ -27,15 +28,15 @@
           <div id='middle-content-top'>
             <div class='number-box shaded-box'>
               <h2>Pending Encodes</h2>
-              <p class='big-number bad-value'>2,345</p>
+              <p class='big-number bad-value' id='pending-encodes'></p>
             </div>
             <div class='number-box shaded-box'>
               <h2>Completed Encodes</h2>
-              <p class='big-number good-value'>97</p>
+              <p class='big-number good-value' id='completed-encodes'></p>
             </div>
             <div class='number-box shaded-box'>
               <h2>Percent Complete</h2>
-              <p class='big-number' style='color: #00B8FF;'>0.04%</p>
+              <p class='big-number normal-value' id='percent-complete'></p>
             </div>
           </div>
 
@@ -60,8 +61,10 @@
   </div>
       <!--  the a tag below can link you to another HTML page  -->
       <!--  if you click the button in the browser right now, you'll get an error because that is not a real file path -->
+
       <!-- <a href="<file path"><button class="default-button">GO TO OTHER PAGE</button></a> -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script src="main.bundle.js"></script>
+    <script src="main.bundle.js"></script>
+
 </body>
 </html>
