@@ -42,10 +42,77 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
 
 	// This file is in the entry point in your webpack config.
-	"use strict";
+	__webpack_require__(1);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _artemis_interface = __webpack_require__(2);
+
+	var artemisInterface = _interopRequireWildcard(_artemis_interface);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	$(document).ready(function () {
+	  artemisInterface.getEncodeNumbers();
+	  artemisInterface.getEncodesByDay();
+	});
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getEncodesByDay = exports.getEncodeNumbers = undefined;
+
+	var _artemis_interface = __webpack_require__(2);
+
+	var artemisInterface = _interopRequireWildcard(_artemis_interface);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	var getEncodeNumbers = function getEncodeNumbers() {
+	  fetch('http://localhost:3000/api/v1/encode_numbers').then(function (response) {
+	    return response.json();
+	  }).then(function (parsedResponse) {
+	    $('#pending-encodes').text(parsedResponse.pending);
+	    $('#completed-encodes').text(parsedResponse.encoded);
+	    $('#percent-complete').text(parsedResponse.percent + '%');
+	  });
+	};
+
+	var getEncodesByDay = function getEncodesByDay() {
+	  fetch('http://localhost:3000/api/v1/encodes_by_day').then(function (response) {
+	    return response.json();
+	  }).then(function (parsedResponse) {
+	    var ctx = document.getElementById("myChart").getContext('2d');
+	    var chart = new Chart(ctx, {
+	      type: 'line',
+	      data: parsedResponse,
+	      options: {
+	        scales: {
+	          xAxes: [{
+	            type: 'time'
+	          }]
+	        }
+	      }
+	    });
+	  });
+	};
+	exports.getEncodeNumbers = getEncodeNumbers;
+	exports.getEncodesByDay = getEncodesByDay;
 
 /***/ })
 /******/ ]);
