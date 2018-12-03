@@ -8,8 +8,10 @@ persephone is the front end for the [artemis](https://www.github.com/patrickshob
   ```shell
   npm install
   ```
+  
+3. Change the server location in `artemis-interface.js`
 
-2. Fire up a development server:
+3. Fire up a development server:
 
 ```shell
 npm start
