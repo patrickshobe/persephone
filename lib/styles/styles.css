@@ -1,6 +1,6 @@
 body {
   background-color: #0d0d0d;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 h2 {
@@ -94,9 +94,15 @@ h2 {
   height: 70vh;
 }
 
+#middle-content-bottom {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 #middle-content-middle {
   margin-top: 5vh;
-  height: 40vh;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -109,6 +115,47 @@ h2 {
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.encode-row {
+  height: 2.2rem;
+  padding-top: 1.3rem;
+}
+
+tr:hover {
+  background-color: RGBA(0, 198, 200, 0.8) !important;
+}
+
+.table-title {
+  font-size: 2.5em;
+  margin-top: 1.7rem;
+}
+
+.centered-row {
+  text-align: center;
+}
+
+.left-shifted-row {
+  padding-left: 1rem;
+}
+#record-table {
+ color: #FFFFFF;
+ width: 70vw;
+ font-size: 1.2em;
+ margin: 3rem;
+}
+
+#pending-record-table {
+ color: #FFFFFF;
+ width: 70vw;
+ font-size: 1.2em;
+ margin: 3rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+tr:nth-child(even){background-color: #0d0d0d}
 
 #top-content-container {
   height: 10vh;
