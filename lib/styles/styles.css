@@ -116,10 +116,32 @@ h2 {
   justify-content: space-evenly;
 }
 
-#record-table {
- border: 1px solid white;
- color: #FFFFFF;
+.encode-row {
+  height: 2.5rem;
+  padding-top: 1.5rem;
 }
+
+th {
+
+  height: 2.5rem;
+}
+
+.centered-row {
+  text-align: center;
+}
+#record-table {
+ color: #FFFFFF;
+ width: 70vw;
+ font-size: 1.2em;
+}
+
+
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tr:nth-child(even){background-color: #0d0d0d}
 
 #top-content-container {
   height: 10vh;
